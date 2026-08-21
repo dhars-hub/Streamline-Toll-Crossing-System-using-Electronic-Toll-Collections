@@ -1,0 +1,142 @@
+-- phpMyAdmin SQL Dump
+-- version 2.10.1
+-- http://www.phpmyadmin.net
+-- 
+-- Host: localhost
+-- Generation Time: Mar 27, 2025 at 10:01 AM
+-- Server version: 5.0.45
+-- PHP Version: 5.2.5
+-- 
+-- ddd
+-- 
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+-- 
+-- Database: `tollplazz`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `register`
+-- 
+
+CREATE TABLE `register` (
+  `id` int(11) NOT NULL,
+  `sname` varchar(100) NOT NULL,
+  `gender` varchar(100) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  `phone` varchar(100) NOT NULL,
+  `uname` varchar(100) NOT NULL,
+  `pass` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table `register`
+-- 
+
+INSERT INTO `register` (`id`, `sname`, `gender`, `address`, `city`, `phone`, `uname`, `pass`) VALUES 
+(2, 'reva', 'Male', 'Anna nagar', 'Trichy', '56567', 'reva', '123'),
+(3, 'ragu', 'Male', '85,Anna Nagar', 'Trichy', '78451514174', 'ragu', '123');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tb_book`
+-- 
+
+CREATE TABLE `tb_book` (
+  `id` int(11) NOT NULL,
+  `efrom` varchar(100) NOT NULL,
+  `eto` varchar(100) NOT NULL,
+  `amt` varchar(100) NOT NULL,
+  `ename` varchar(100) NOT NULL,
+  `phone` varchar(100) NOT NULL,
+  `vno` varchar(1000) NOT NULL,
+  `pay` varchar(100) NOT NULL,
+  `bank` varchar(1000) NOT NULL,
+  `acno` varchar(100) NOT NULL,
+  `cvv` varchar(100) NOT NULL,
+  `eedate` varchar(100) NOT NULL,
+  `uname` text NOT NULL,
+  `status` varchar(50) NOT NULL,
+  `pid` int(11) NOT NULL auto_increment,
+  PRIMARY KEY  (`pid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=32 ;
+
+-- 
+-- Dumping data for table `tb_book`
+-- 
+
+INSERT INTO `tb_book` (`id`, `efrom`, `eto`, `amt`, `ename`, `phone`, `vno`, `pay`, `bank`, `acno`, `cvv`, `eedate`, `uname`, `status`, `pid`) VALUES 
+(2, 'Chennai', 'Trichy', '15', '150', 'reva', 'TN5645', 'sdfsdf', 'CASH', 'SBI', '456567', '', '', '', 12),
+(3, 'Trichy', 'Sampuram', '45', '60', 'kavi', 'TN152615', 'srirangam', 'CARD', 'IOB', '678678787876', '', '', '', 13),
+(2, 'Chennai', 'Trichy', '15', '150', 'raja', 'TN5454', 'sdfsdf', 'CASH', 'SBI', 'wete', '18-03-25', 'reva', '', 14),
+(2, 'Chennai', 'Trichy', '15', '150', 'raja', 'TN5454', 'sdfsdf', 'CASH', 'SBI', 'wete', '18-03-25', 'reva', '', 15),
+(1, 'Trichy', 'Chennai', '1', '5', 'revathy', '99946552515', 'Trichy', 'CASH', 'SBI', '567568', '18-03-25', 'reva', '', 16),
+(2, 'Chennai', 'Trichy', '15', '150', 'revathy', '99946552515', 'Trichy', 'CASH', 'SBI', '453453', '18-03-25', 'reva', '', 17),
+(2, 'Chennai', 'Trichy', '15', '150', 'ragu', 'TN5454', 'dassad', 'CASH', 'SBI', '46456', '18-03-25', 'reva', '', 18),
+(2, 'Chennai', 'Trichy', '15', '150', 'ragu', 'TN5454', 'dassad', 'CASH', 'SBI', '46456', '18-03-25', 'reva', '', 19),
+(2, 'Chennai', 'Trichy', '15', '150', 'ragu', 'TN5454', 'dassad', 'CASH', 'SBI', '46456', '18-03-25', 'reva', '', 20),
+(2, 'Chennai', 'Trichy', '15', '150', 'ragu', 'TN5454', 'dassad', 'CASH', 'SBI', '46456', '18-03-25', 'reva', '', 21),
+(2, 'Chennai', 'Trichy', '15', '150', 'ragu', 'TN5454', 'dassad', 'CASH', 'SBI', '46456', '18-03-25', 'reva', '', 22),
+(2, 'Chennai', 'Trichy', '15', '150', 'ragu', 'TN5454', 'dassad', 'CASH', 'SBI', '46456', '18-03-25', 'reva', '', 23),
+(2, 'Chennai', 'Trichy', '15', '150', 'ragu', 'TN5454', 'dassad', 'CASH', 'SBI', '46456', '18-03-25', 'reva', '', 24),
+(3, 'Trichy', 'Sampuram', '45', '60', 'revathy', '99946552515', 'Trichy', 'CASH', 'SBI', '565r', '18-03-25', 'reva', '', 25),
+(3, 'Trichy', 'Sampuram', '45', '60', 'revathy', 'TN5454', 'Trichy', 'CASH', 'SBI', '565r', '18-03-25', 'reva', '', 26),
+(3, 'Trichy', 'Sampuram', '45', '60', 'revathy', 'TN5454', 'Trichy', 'CASH', 'SBI', '565r', '18-03-25', 'reva', '', 27),
+(1, 'Trichy', 'Chennai', '1', '5', 'rose', 'TN657567', 'fgg', 'CARD', 'SBI', '3534645645', '27-03-25', 'reva', '', 28),
+(1, 'Trichy', 'Chennai', '1', '5', 'rose', 'TN657567', 'fgg', 'CARD', 'SBI', '3534645645', '27-03-25', 'reva', '', 29),
+(5, 'Chennai', 'Trichy', '325', '110', 'gokul', 'TN152615', '12,ANNA Nagar\r\nChennai', 'CARD', 'IOB', '4646767567', '27-03-25', 'gokul', '', 30),
+(5, 'Chennai', 'Trichy', '325', '110', 'Mr.raja', 'TN5050', 'Chennai', 'CARD', 'SBI', '786787', '27-03-25', 'ragu', '', 31);
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tb_reg`
+-- 
+
+CREATE TABLE `tb_reg` (
+  `ename` varchar(55) NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `city` varchar(50) NOT NULL,
+  `phone` varchar(50) NOT NULL,
+  `uname` varchar(50) NOT NULL,
+  `pass` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table `tb_reg`
+-- 
+
+INSERT INTO `tb_reg` (`ename`, `address`, `city`, `phone`, `uname`, `pass`) VALUES 
+('reva', 'dfsdg', 'Trichy', '57567856', 'reva', '123'),
+('kavi', '12,Anna Nagar', 'Trichy', '784747474', 'kavi', '123'),
+('gokul', '12,Anna Nagar', 'Chennai', '98562521515', 'gokul', '123');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tb_root`
+-- 
+
+CREATE TABLE `tb_root` (
+  `id` int(11) NOT NULL,
+  `efrom` varchar(100) NOT NULL,
+  `eto` varchar(100) NOT NULL,
+  `km` varchar(100) NOT NULL,
+  `amt` varchar(100) NOT NULL,
+  `location` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table `tb_root`
+-- 
+
+INSERT INTO `tb_root` (`id`, `efrom`, `eto`, `km`, `amt`, `location`) VALUES 
+(1, 'Trichy', 'Chennai', '1', '5', 'dir/Trichy,Junction/Trichy ,Woraiyur/Trichy, ThilaiNagar/Trichy ,ChatramBusstand/Trichy,Srirangam/Trichy,Kambarasampettai,'),
+(3, 'Trichy', 'Sampuram', '45', '60', 'dir/Trichy,Junction/Trichy ,Woraiyur/Trichy, ThilaiNagar/Trichy ,ChatramBusstand/Trichy,Srirangam/Trichy,Kambarasampettai,'),
+(4, 'Trichy', 'Chennai', '25', '35', 'dir/Trichy,Junction/Trichy ,Woraiyur/Trichy, ThilaiNagar/Trichy ,ChatramBusstand/Trichy,Srirangam/Trichy,Kambarasampettai,'),
+(5, 'Chennai', 'Trichy', '325', '110', 'dir/Chennai ,Marina Beach/Chennai,Kapaleeshwarar Temple/Chennai,Arignar Anna Zoological ark/Chennai,Central railway station');
